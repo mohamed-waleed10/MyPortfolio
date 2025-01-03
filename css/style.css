@@ -425,6 +425,93 @@ a{
     margin-left: 0;
 }
 }
+/* MY-WORKS STARTS */
+
+#my-works{
+    background-color:#1f242d;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+}
+#my-works .container{
+    width: 90%;
+}
+.container-header h2{
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+.container-header h2 span{
+    color: #7cf03d;
+}
+
+
+#my-works .my-works-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px 20px;
+}
+
+#my-works .my-works-content .my-works-content-item {
+
+    background-color: #7cf03d;
+    border-radius: 10px;
+    padding: 8px;
+    position: relative;
+    transition: 0.2s linear;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* #my-works .my-works-content .my-works-content-item:hover */
+ #my-works .my-works-content .my-works-content-item .my-works-content-item-overlay{
+    background-color: #000000ab;
+    position: absolute;
+    inset: 0;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px; 
+    transition: scale 0.3s linear;
+}
+
+#my-works .my-works-content .my-works-content-item:hover .my-works-content-item-overlay{
+    transform: scale(1);
+}
+
+#my-works .my-works-content .my-works-content-item .my-works-content-item-overlay a{
+    width: 55px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: 0.3s linear;
+}
+
+#my-works .my-works-content .my-works-content-item .my-works-content-item-overlay a:hover{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+#my-works .my-works-content .my-works-content-item:hover{
+    box-shadow: 0 0 5px 12px #7cf03d;
+
+}
+
+#my-works .my-works-content .my-works-content-item img{
+    height: 300px;
+    object-fit: cover;
+    /* object-position: center; */
+}
+
+/* MY-WORKS END */
 /* end section contact */
 /* start section footer */
 footer{
