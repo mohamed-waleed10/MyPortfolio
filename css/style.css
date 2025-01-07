@@ -588,8 +588,8 @@ transition: all 0.3s ease-in-out;
 .right-side .first-input input{
     height: 50px;
     width: 100%;
-    border-radius: 8px;
-    border-bottom: 1px solid #0fe;
+    border-radius: 15px;
+    border-bottom: 2px solid #0fe;
     cursor: pointer;
     padding-left: 8px;
     border: none;
@@ -603,16 +603,17 @@ transition: all 0.3s ease-in-out;
     min-height: 110px;
     width: 100%;
     margin-top: 7px;
-    border-radius: 8px;
+    border-radius: 15px;
     border: none;
     cursor: pointer;
     padding-left: 8px;
     background-color: rgba(0, 255, 238, 0.3);
-    border-bottom: 1px solid #0fe;
+    border-bottom: 2px solid #0fe;
 }
 #btn-con{
     margin-top: 10px;
     cursor: pointer;
+
 }
 @media (max-width: 950px) {
     .container{
