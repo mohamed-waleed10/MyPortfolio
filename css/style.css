@@ -22,7 +22,7 @@ a{
     justify-content: space-between;
     padding: 25px 9%;
     z-index: 100;
-    background-color: #7cf03d72;
+    background-color: rgba(0, 255, 238, 0.488);
 }
 .navbar .logo {
     font-size: 30px;
@@ -45,6 +45,40 @@ a{
 .navbar ul li .active a{
     color: #1f242d;
 }
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 30px;
+}
+@media (max-width:992px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 255, 238, 0.488);
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+        margin-top: 14px;
+    }
+}
+/* end Navbar section */
 /* start home section */
 #home{
     width: 100%;
@@ -72,7 +106,7 @@ a{
 }
 #home .home-content .home-left .home-info h3 {
     margin: 20px 0;
-    color: #7cf03d;
+    color: #0fe;
     font-size: 35px;
 }
 #home .home-content .home-left .home-info p{
@@ -82,7 +116,7 @@ a{
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid #7cf03d;
+    border-right: 2px solid #0fe;
     animation: typing 3s steps(20, end), blink 0.5s step-end infinite alternate;
 }
 @keyframes typing {
@@ -98,7 +132,7 @@ a{
         border-right-color: transparent;
     }
     100% {
-        border-right-color: #7cf03d;
+        border-right-color: #0fe;
     }
 }
 #home .home-content .home-img {
@@ -109,9 +143,17 @@ a{
     justify-content: center;
 }
 #home .home-content .home-img img {
-    width: 70%;
-    border-radius: 15px;
-    border: 3px solid #7cf03d;
+    width: 80%;
+    border-radius: 50%;
+    border: 3px solid #0fe;
+    box-shadow: 0 0 25px #0fe;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+#home .home-content .home-img img:hover{
+    box-shadow: 0 0 25px #0fe
+                0 0 25px #0fe
+                0 0 25px #0fe;
 }
 .home-info .social{
     padding-top: 10px;
@@ -122,10 +164,10 @@ a{
 .btn{
     display: inline-block;
     padding: 10px 30px;
-    background-color: #7cf03d;
-    border: 3px solid #7cf03d;
+    background-color: #0fe;
+    border: 3px solid #0fe;
     border-radius: 40px;
-    box-shadow: 0 0 10px #7cf03d;
+    box-shadow: 0 0 10px #0fe;
     font-size: 16px;
     font-weight: 600;
     color: black;
@@ -134,7 +176,7 @@ a{
 }
 .btn:hover{
     background: transparent;
-    color: #7cf03d;
+    color: #0fe;
     box-shadow: none;
 }
 .social{
@@ -143,39 +185,30 @@ a{
     margin-top: 10px;
 }
 .social a{
-    border: 2px solid #7cf03d;
+    border: 2px solid #0fe;
     border-radius: 50%;
     display: inline-flex;
     padding: 4px;
-    color: #7cf03d;
+    color: #0fe;
     transition:all 0.5s;
 }
 .social a:hover{
-    background-color: #7cf03d;
+    background-color: #0fe;
     color: #1f242d;
-    box-shadow: 0 0 10px #7cf03d;
+    box-shadow: 0 0 10px #0fe;
 }
-
-@media (min-width: 1200px) {
-    .home-info {
-        max-width: 1140px;
+@media screen and (max-width: 910px) {
+    #home .home-content .home-img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
-@media (min-width: 992px) {
-    .home-info {
-        max-width: 960px;
-    }
-}
-@media (min-width: 768px) {
-    .home-info {
-        max-width: 720px;
-    }
-}
-@media (min-width: 576px) {
-    .home-info{
-        max-width: 540px;
-        flex-direction: column;
-    }
+#home .home-content .home-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* end home section */
 /* strat about me */
@@ -197,7 +230,7 @@ a{
     width: 400px;
     height: 400px;
     border-radius: 15px;
-    border: 3px solid #7cf03d ;
+    border: 3px solid #0fe ;
 }
 .main .right-item{
     padding-left: 50px;
@@ -205,7 +238,7 @@ a{
 .main .right-item h3{
     font-size: 27px;
     line-height: 1.5;
-    color: #7cf03d;
+    color: #0fe;
 }
 .main .right-item p{
     line-height: 1.5;
@@ -213,18 +246,18 @@ a{
     font-weight:700d ;
 }
 .main .right-item h2 {
-    color: #7cf03d;
+    color: #0fe;
     font-size: 35px;
     margin-block-end: 2%;
     margin-top: 8px;
 }
 .main .right-item h3{
-    color: #7cf03d;
+    color: #0fe;
     font-size: 20px;
 }
 .main .right-item .info .date {
     margin: 10px 0;
-    background-color: #7cf03d76;
+    background-color: #0fe;
     width: 21%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -267,11 +300,22 @@ a{
 }
 .left-item i{
     font-size: 40px;
-    color: #7cf03d;
+    color: #0fe;
 }
 .main-contant .item:hover{
-    background: transparent;
-    color: #fff;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+}
+@media screen and (max-width: 1100px) and (min-width: 700px) {
+    .services .main-contant .item {
+        width: 45% !important;
+    }
+}
+@media screen and (max-width: 910px) {
+    .services .main-contant .item {
+        width: 90%;
+    }
 }
 /* end services section  */
  /* end section about me */
@@ -298,7 +342,7 @@ a{
     color: #fff;
 }
 .header .left-header #line{
-    color: #7cf03d;
+    color: #0fe;
 }
 .main-contant .name h2 {
     text-align: center;
@@ -326,7 +370,7 @@ a{
     padding: 2%;
 }
 .skills .all-skills .skill-img:hover{
-    border: 3px solid #7cf03d;
+    border: 3px solid #0fe;
     border-radius: 15px;
     width: 60px;
     height: 60px;
@@ -335,12 +379,12 @@ a{
     width: 100%;
 }
 .header span {
-    background-color: #7cf03d;
+    background-color: #0fe;
     width: 60px;
     height: 60px;
     padding: 15px;
     text-align: center;
-    border: 1px solid #7cf03d;
+    border: 1px solid #0fe;
     display: inline-block;
     display: flex
 ;
@@ -348,6 +392,18 @@ a{
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1050px) {
+    .skills .all-skills {
+        width: 70%;
+        gap: 10px 5px;
+    }
+}
+@media screen and (max-width: 910px) {
+    .skills .all-skills {
+        width: 100%;
+        gap: 10px 5px;
+    }
 }
 /* end section slills*/
 /* MY-WORKS STARTS */
@@ -374,22 +430,21 @@ a{
     line-height: 1.5;
 }
 .container-header-number{
-    background-color: #7cf03d;
+background-color: #0fe;
 width: 60px;
 height: 60px;
 padding: 15px;
 text-align: center;
-border: 1px solid #7cf03d;
+border: 1px solid #0fe;
 display: inline-block;
 display: flex;
-;
 justify-content: center;
 align-items: center;
 cursor: pointer;
 transition: all 0.3s ease-in-out;
 }
 .container-header h2 span{
-    color: #7cf03d;
+    color: #0fe;
 }
 
 
@@ -401,7 +456,7 @@ transition: all 0.3s ease-in-out;
 
 #my-works .my-works-content .my-works-content-item {
 
-    background-color: #7cf03d;
+    background-color: #0fe;
     border-radius: 10px;
     padding: 8px;
     position: relative;
@@ -445,7 +500,7 @@ transition: all 0.3s ease-in-out;
 }
 
 #my-works .my-works-content .my-works-content-item:hover{
-    box-shadow: 0 0 5px 12px #7cf03d;
+    box-shadow: 0 0 5px 12px #0fe;
 
 }
 
@@ -454,7 +509,12 @@ transition: all 0.3s ease-in-out;
     object-fit: cover;
     /* object-position: center; */
 }
-
+@media screen and (max-width:1050px){
+    .my-works-content .my-works-content-item .{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
 /* MY-WORKS END */
 /* start section contact */
 .contact{
@@ -470,7 +530,7 @@ transition: all 0.3s ease-in-out;
     font-size: 45px;
 }
 .contact span{
-    color: #7cf03d;
+    color: #0fe;
 }
 .contact-me{
     width: 100%;
@@ -491,7 +551,7 @@ transition: all 0.3s ease-in-out;
     padding: 10px;
     margin-top: 50px;
     cursor: pointer;
-    border-right: 3px solid #7cf03d;
+    border-right: 3px solid #0fe;
 }
 .left-side .items i{
     font-size: 30px;
@@ -499,7 +559,7 @@ transition: all 0.3s ease-in-out;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    color: #7cf03d;
+    color: #0fe;
 }
 .text-title , .text-one , .text-two{
     text-align: center;
@@ -511,12 +571,11 @@ transition: all 0.3s ease-in-out;
 .right-side{
     margin-top: 50px;
     width: 70%;
-    background-color: #ffffff28;
     border-radius: 15px;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .right-title h2 {
-    color: #7cf03d;
+    color: #0fe;
     font-size: 30px;
     padding-left: 8px;
     padding-top: 8px;
@@ -530,10 +589,11 @@ transition: all 0.3s ease-in-out;
     height: 50px;
     width: 100%;
     border-radius: 8px;
-    border: 1px solid #7cf03d;
+    border-bottom: 1px solid #0fe;
     cursor: pointer;
     padding-left: 8px;
-    background-color: #ffffff58;
+    border: none;
+    background-color: rgba(0, 255, 238, 0.3);
 }
 #input{
     margin-bottom: 5px;
@@ -544,10 +604,11 @@ transition: all 0.3s ease-in-out;
     width: 100%;
     margin-top: 7px;
     border-radius: 8px;
+    border: none;
     cursor: pointer;
     padding-left: 8px;
-    background-color: #ffffff58;
-    border: 1px solid #7cf03d;
+    background-color: rgba(0, 255, 238, 0.3);
+    border-bottom: 1px solid #0fe;
 }
 #btn-con{
     margin-top: 10px;
@@ -608,17 +669,14 @@ footer .container{
     cursor: pointer;
 }
 .left-footer p span{
-    color: #7cf03d;
+    color: #0fe;
     transition: all 0.5s;
-}
-.left-footer p span:hover{
-    font-size: 25px;
 }
 .up {
     position: fixed;
     bottom: 10px;
     right: -40px;
-    background-color: #7cf03d;
+    background-color: #0fe;
     color: white;
     font-weight: bold;
     font-size: 13px;
@@ -630,8 +688,8 @@ footer .container{
 }
 .up:hover{
     background: transparent;
-    color: #7cf03d;
-    border: 3px solid #7cf03d;
+    color: #0fe;
+    border: 3px solid #0fe;
 }
 .up.show {
     right: 20px;

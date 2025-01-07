@@ -12,7 +12,7 @@
     <nav class="navbar">
         <!-- start navbar  -->
         <a href="#" class="logo">Portfolio</a>
-        <ul>
+        <ul id="menuList">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#services">Services</a></li>
@@ -20,6 +20,9 @@
             <li><a href="#my-works">Projects</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
+        <div class="menu-icon">
+            <i class='bx bx-menu'onclick="toggleMenu()"></i>
+        </div>
     </nav>
             <!-- end navbar  -->
         <!-- start home  -->
@@ -363,11 +366,11 @@
     </section>
     <!-- My Works end -->
     <!-- start contact  -->
-    <section class="contact-me">
+    <section id="Contact" class="contact-me">
         <div class="container">
             <div class="container-header">
                 <h2 class="container-header-title">MY<br>
-                    <span>WORKS</span>
+                    <span>Contact</span>
                 </h2>
                 <span class="container-header-number">05</span>
             </div>
