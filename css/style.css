@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     background-color: #1f242d;
@@ -13,7 +14,7 @@ a{
     text-decoration: none;
 }
 .navbar{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -21,7 +22,7 @@ a{
     align-items: center;
     justify-content: space-between;
     padding: 25px 9%;
-    z-index: 100;
+    z-index: 999;
     background-color: rgba(0, 255, 238, 0.488);
 }
 .navbar .logo {
@@ -31,6 +32,8 @@ a{
 }
 .navbar ul{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .navbar ul li {
     list-style: none;
@@ -368,10 +371,11 @@ a{
     border: 3px solid transparent;
     transition: all .5s;
     padding: 2%;
+    gap: 10px 20px;
 }
 .skills .all-skills .skill-img:hover{
     border: 3px solid #0fe;
-    border-radius: 15px;
+    border-radius: 50%;
     width: 60px;
     height: 60px;
 }
